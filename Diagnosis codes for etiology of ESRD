@@ -1,0 +1,26 @@
+esrd_reason="                                                                                      ";
+select (renal_diag_code);
+when ('E09.21', 'E10.22', 'E10.29', 'E11.22', 'E13.21', 'E11.29', 'E10.21', 'E11.21', 'E13.22', 'E13.29', '250.00', '250.01','250.40', '250.41') esrd_reason="Diabetes";
+when ('N00.8', 'N01.9', 'N02.8', 'N03.0', 'N00.3', 'N05.7', 'N03.1', 'N03.2', 'N03.3', 'N03.4', 'N03.5', 'N03.6', 'N03.7', 'N03.8', '580.4', 'N03.9', 'N04.0', 
+'N04.1', 'N04.2', 'N04.3', 'N04.4', 'N04.5', 'N04.6', 'N04.7', 'N04.8', 'N04.9', 'N05.9', 'N07.0', 'N05.8','580.0', '580.89', '582.0', 
+'582.1', '582.9', '583.1', '583.21', '583.4', '583.2', '583.21', '583.22') esrd_Reason="Glomerulonephritis";
+when ('D59.3', 'D69.0', 'I77.89', 'M31.0', 'M31.1', 'M31.31', 'M31.7', 'M32.0', 'M32.10', 'M32.14', 'M32.15', 'M34.89') esrd_reason="Secondary glomerulonephritis/Vasculitis";
+when ('N10', 'N11.9', 'N13.70', 'N13.8', '590.0') esrd_Reason="Interstitial nephritis/pyelonephritis";
+when ('C64.9', 'C80.1', 'C85.93', 'C88.2', 'C90.00', 'D30.9', 'D41.00', 'D41.9', 'E85.9', 'N05.8', '223.0', 'C64.2', '239.51') esrd_reason="Neoplasms/tumor";
+when ('E83.52', '275.49') esrd_reason="Disorders of mineral bone metabolism";
+when ('A18.10', 'N28.9', 'N28.82', 'N28.89', 'Q62.10', '189.9','593.83','593.89') esrd_reason="Disorders of genetourinary systems";
+when ('N17.0', 'N17.1', 'N17.9', 'O90.4') esrd_Reason="Acute kidney failure";
+when ('T86.00', 'T86.10', 'T86.20', 'T86.19', '996.89', '996.85', '996.87', '996.84', 'T86.12', 'T86.40', 'T86.91', 'T86.819', 'T86.859', 'T86.899','T86.99', '996.80', '996.81', '996.82', '996.83') esrd_reason="Complications of transplant";
+when ('I12.9', 'I15.0', 'I15.8', 'I75.81', 'I12.0', '403.9', '403.91') esrd_reason="Hypertension";
+when ('E72.04', 'E72.53', 'E75.21', 'N07.8', 'N31.9', 'Q56.0', 'Q60.2', 'Q61.4', 'Q62.11', 'Q79.4', '756.71', 'Q87.81', '446.21', 'N07.9', 'Q60.2', '753.0',
+'Q62.12', 'Q63.8', 'Q64.2', 'Q79.4', 'Q85.1', 'Q86.8', 'Q87.1', 'Q87.81', '759.8', '759.5', '759.89') esrd_Reason="Hereditary/congenital diseases";
+when ('Q61.19', 'Q61.2', 'Q61.5', 'Q61.8', 'Q61.19', '753.13', '753.14', '753.16') esrd_reason="Polycystic kidney";
+when ('I50.9', 'I70.1', 'I77.89', '440.1') esrd_reason="CHF";
+when ('B20') esrd_reason='HIV';
+when ('D57.1', 'D57.3', '282.60') esrd_Reason="Sickle cell disease";
+when ('N20.0', 'Q63.8', '592.0', '592.9') esrd_reason="Calculus of kidney";
+when ('NA', '', 'R99', 'R69', '799.9') esrd_reason="Unknown";
+when ('N14.1', 'N14.2', 'N14.3', 'N14.4', 'N14.5') esrd_reason="Nephropathy induced by drugs, heavy metals, or chemicals";
+when ('M31.0', 'M31.31', 'M32.10', 'M32.14', 'M32.9', 'M34.89', '042') esrd_reason="Systemic connective tissue disorders";
+otherwise ;
+end;
